@@ -46,3 +46,7 @@ android/.kotlin/
 # Gradle
 .gradle/
 *.hprof
+
+# Release signing (keep secure!)
+android/app/release.keystore
+android/app/keystore_base64.txt
