@@ -26,8 +26,8 @@ jobs:
         run: npm ci
 
       - name: Build Android Release
-        cd android
         run: ./gradlew assembleRelease
+        working-directory: ./android
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
