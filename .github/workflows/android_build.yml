@@ -27,11 +27,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Accept Android Licenses
+        run: |
+          yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
+
+      - name: Check Java Version
+        run: java -version
+
       - name: Make Gradlew Executable
         run: chmod +x android/gradlew
 
       - name: Build Android Release
-        run: ./gradlew assembleRelease
+        run: ./gradlew assembleRelease --no-daemon --stacktrace
         working-directory: ./android
 
       - name: Upload Artifact
