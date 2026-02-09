@@ -27,6 +27,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Make Gradlew Executable
+        run: chmod +x android/gradlew
+
       - name: Build Android Release
         run: ./gradlew assembleRelease
         working-directory: ./android
