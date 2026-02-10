@@ -22,9 +22,9 @@ allprojects {
         mavenCentral()
         maven { url 'https://www.jitpack.io' }
     }
-    // Disable the Reanimated version check task which is giving false positives
+    // Disable the Reanimated version check tasks which are giving false positives
     tasks.whenTaskAdded { task ->
-        if (task.name.contains('assertMinimalReactNativeVersionTask')) {
+        if (task.name.contains('assertMinimalReactNativeVersionTask') || task.name.contains('assertWorkletsVersionTask')) {
             task.enabled = false
         }
     }
