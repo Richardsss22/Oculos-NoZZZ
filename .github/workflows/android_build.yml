@@ -39,9 +39,7 @@ jobs:
 
       - name: Build Android Release
         run: |
-          ./gradlew assembleRelease \
-            -PREACT_NATIVE_WORKLETS_NODE_MODULES_DIR=${{ github.workspace }}/node_modules/react-native-worklets-core \
-            --no-daemon --stacktrace
+          ./gradlew assembleRelease --no-daemon --stacktrace
         working-directory: ./android
 
       - name: Upload Artifact
