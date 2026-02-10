@@ -38,7 +38,10 @@ jobs:
         run: chmod +x android/gradlew
 
       - name: Build Android Release
-        run: ./gradlew assembleRelease --no-daemon --stacktrace
+        env:
+          REACT_NATIVE_WORKLETS_NODE_MODULES_DIR: ${{ github.workspace }}/node_modules/react-native-worklets-core
+        run: |
+          cd android && ./gradlew assembleRelease --no-daemon --stacktrace
         working-directory: ./android
 
       - name: Upload Artifact

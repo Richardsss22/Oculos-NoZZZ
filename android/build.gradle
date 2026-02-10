@@ -4,8 +4,6 @@ buildscript {
     ext {
         ndkVersion = "26.1.10909125"
         kotlinVersion = "2.0.21"
-        // Manually specify worklets core directory to fix resolution in Reanimated 4
-        reactNativeWorkletsDir = new File(["node", "--print", "require.resolve('react-native-worklets-core/package.json')"].execute(null, rootDir).text.trim()).getParentFile().getAbsolutePath() + "/android"
     }
     repositories {
         google()
