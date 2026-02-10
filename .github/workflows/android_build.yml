@@ -27,10 +27,9 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
-      - name: Create Dummy Worklets Package
+      - name: Neutralize Worklets Babel Plugin
         run: |
-          mkdir -p node_modules/react-native-worklets
-          echo '{"name":"react-native-worklets","version":"0.0.1"}' > node_modules/react-native-worklets/package.json
+          echo "module.exports = function() { return { visitor: {} }; };" > node_modules/react-native-worklets/src/plugin/index.js
 
       - name: Accept Android Licenses
         run: |
