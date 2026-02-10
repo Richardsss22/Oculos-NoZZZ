@@ -27,10 +27,6 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
-      - name: Neutralize Worklets Babel Plugin
-        run: |
-          echo "module.exports = function() { return { visitor: {} }; };" > node_modules/react-native-worklets/src/plugin/index.js
-
       - name: Accept Android Licenses
         run: |
           yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
