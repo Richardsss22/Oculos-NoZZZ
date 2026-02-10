@@ -27,6 +27,11 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
+      - name: Create Dummy Worklets Package
+        run: |
+          mkdir -p node_modules/react-native-worklets
+          echo '{"name":"react-native-worklets","version":"0.0.1"}' > node_modules/react-native-worklets/package.json
+
       - name: Accept Android Licenses
         run: |
           yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
