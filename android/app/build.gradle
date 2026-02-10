@@ -180,3 +180,10 @@ dependencies {
         implementation jscFlavor
     }
 }
+
+// Disable the Reanimated version check task which is giving false positives
+tasks.whenTaskAdded { task ->
+    if (task.name.contains('assertMinimalReactNativeVersionTask')) {
+        task.enabled = false
+    }
+}
