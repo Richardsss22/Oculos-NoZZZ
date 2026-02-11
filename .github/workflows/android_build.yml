@@ -39,20 +39,11 @@ jobs:
 
       - name: Build Android Release
         run: |
-          ./gradlew assembleRelease --no-daemon --stacktrace > build.log 2>&1 || true
-          cat build.log
+          ./gradlew assembleRelease --no-daemon --stacktrace
         working-directory: ./android
 
-      - name: Upload Build Log
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-log
-          path: android/build.log
-
       - name: Upload Artifact
-        if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: app-release
+          name: NoZZZ-release
           path: android/app/build/outputs/apk/release/app-release.apk

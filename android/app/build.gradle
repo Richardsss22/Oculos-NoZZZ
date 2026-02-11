@@ -87,9 +87,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.oculus.safe'
+    namespace 'com.richardsss22.nozzz'
     defaultConfig {
-        applicationId 'com.oculus.safe'
+        applicationId 'com.richardsss22.nozzz'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

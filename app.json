@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Oculus",
-    "slug": "oculus",
+    "name": "NoZZZ",
+    "slug": "nozzz",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -14,14 +14,14 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.oculus.safe"
+      "bundleIdentifier": "com.richardsss22.nozzz"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.oculus.safe",
+      "package": "com.richardsss22.nozzz",
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
       "permissions": [
